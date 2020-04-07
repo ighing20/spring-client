@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
@@ -11,7 +12,7 @@ import com.ighing.springclient.model.Cliente;
 
 public class RestClient {
 
-	private static String RESOURCE_URL = "http://40.76.10.97:8080/spring-mvc-rest/clientes";
+	private static final String RESOURCE_URL = "http://40.76.10.97:8080/spring-mvc-rest/clientes";
 
 	private static final RestTemplate REST_TEMPLATE = new RestTemplate();
 
