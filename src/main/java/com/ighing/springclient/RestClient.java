@@ -14,14 +14,16 @@ public class RestClient {
 
 	public static void main(String[] args) {
 
-		System.out.println(finOne(1));
+		System.out.println(finOne(2));
 		
 		Cliente cliente = new Cliente();
-		cliente.setNombre("Juan");
+		cliente.setNombre("roberto");
 		cliente.setDireccion("Main Street");
 		cliente.setTelefono("555-555-5555");
 		
-		addCliente(cliente);
+		//addCliente(cliente);
+		
+		deleteCliente(3);
 
 	}
 
@@ -32,5 +34,9 @@ public class RestClient {
 	public static void addCliente(Cliente cliente) {
 		HttpEntity<Cliente> request = new HttpEntity<>(cliente);
 		REST_TEMPLATE.postForObject(RESOURCE_URL, request, Cliente.class);
+	}
+	
+	public static void deleteCliente(int id) {
+		REST_TEMPLATE.delete(RESOURCE_URL + "/" + id);
 	}
 }
