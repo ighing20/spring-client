@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
@@ -35,6 +36,11 @@ public class RestClient {
 
 	public static void deleteCliente(int id) {
 		REST_TEMPLATE.delete(RESOURCE_URL + "/" + id);
+	}
+	
+	public static ResponseEntity<Cliente> updateCliente(Cliente cliente) {
+		HttpEntity<Cliente> request = new HttpEntity<>(cliente);
+		return REST_TEMPLATE.exchange(RESOURCE_URL+"/"+cliente.getId(), HttpMethod.PUT, request, Cliente.class);
 	}
 
 }
