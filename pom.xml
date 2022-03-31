@@ -7,7 +7,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
-		<spring.version>5.2.5.RELEASE</spring.version>
+		<spring.version>5.3.18</spring.version>
 		<jaction.xml.version>2.9.4</jaction.xml.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
