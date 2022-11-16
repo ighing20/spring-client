@@ -8,7 +8,7 @@
 
 	<properties>
 		<spring.version>5.2.5.RELEASE</spring.version>
-		<jaction.xml.version>2.9.4</jaction.xml.version>
+		<jaction.xml.version>2.12.7.1</jaction.xml.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
